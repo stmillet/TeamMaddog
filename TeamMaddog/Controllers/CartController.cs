@@ -10,7 +10,7 @@ namespace TeamMaddog.Controllers
     public class CartController : Controller
     {
         //initialize the shopping Cart
-        public static Cart theCart = new Cart();
+        public static Cart theCart = new Cart(); 
 
         //show cart items function displays cart items
         public ActionResult ShowCartItems()
