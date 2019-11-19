@@ -107,7 +107,6 @@
     <Content Include="Content\Images\PleasurePoint.jpg" />
     <Content Include="Content\Images\PleasurePoint2.jpg" />
     <Content Include="Content\Images\Sweater.JPG" />
-    <Content Include="Content\Images\sweatshirt.jpg" />
     <Content Include="Content\Images\Tshirt.JPG" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
