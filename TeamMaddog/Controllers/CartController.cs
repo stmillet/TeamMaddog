@@ -10,12 +10,12 @@ namespace TeamMaddog.Controllers
     public class CartController : Controller
     {
         //initialize customer list
-        public static Cart lstCartItems = new Cart();
+        public static Cart theCart = new Cart();
 
         //show cart items function displays cart items
         public ActionResult ShowCartItems()
         {
-            return View(lstCartItems);
+            return View(theCart);
         }
 
         //get info from addcartitems view
@@ -31,7 +31,7 @@ namespace TeamMaddog.Controllers
         {
             if (ModelState.IsValid)
             {
-                lstCartItems.TheProducts.Add(myCartItems);
+                theCart.TheProducts.Add(myCartItems);
                 return RedirectToAction("Index", "Home");
             }
             else
