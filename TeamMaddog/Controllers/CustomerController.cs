@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TeamMaddog.Models;
 
 namespace TeamMaddog.Controllers
 {
@@ -14,7 +15,7 @@ namespace TeamMaddog.Controllers
         //show customer function displays customer information
         public ActionResult ShowCustomerInfo()
         {
-            return View(lstCustomer);
+            return View(lstCustomerInfo);
         }
 
         //get info from addcustomer view
