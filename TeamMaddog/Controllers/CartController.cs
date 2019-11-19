@@ -20,16 +20,10 @@ namespace TeamMaddog.Controllers
             new Product { ProductID = 4, ProdName = "Tshirt", ProdPrice = 19.99, ProdSize = "" },
         };
 
-        public ActionResult Details(string name)
-        {
-            Product theProduct = lstProducts.Find(x => x.ProdName == name);
-            return View(theProduct);
-        }
-
         //show cart items function displays cart items
         public ActionResult ShowCartItems()
         {
-            if(theCart.TheProducts == null)
+            if (theCart.TheProducts == null)
             {
                 theCart.TheProducts = new List<Product>();
             }
