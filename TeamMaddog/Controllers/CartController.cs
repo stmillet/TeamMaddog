@@ -23,6 +23,10 @@ namespace TeamMaddog.Controllers
         //show cart items function displays cart items
         public ActionResult ShowCartItems()
         {
+            if(theCart.TheProducts == null)
+            {
+                theCart.TheProducts = new List<Product>();
+            }
             return View(theCart);
         }
 

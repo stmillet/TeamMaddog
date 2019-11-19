@@ -7,15 +7,19 @@
     <h1> TEAM MADDOG</h1>
 
 
-    <div class=" container" style="position:inherit; margin-left:0px; margin-top: 100px">
+    <div class=" container" style="position:inherit; margin-left:0px; margin-top: 50px">
         <img src="~/Content/Images/HomePage.JPG" style="width: 600px; height: auto" />
-        <button class=" btn" sytle="padding-left: 40px">Shop Now</button>
+     <button class=" btn">
+         @Html.ActionLink("Shop Now", "AddCartItems", "Cart")
+     </button>
     </div>
    
 
-    <div class=" container btn" style=" position:inherit; margin-top: 250px; margin-left: 140px">
-        <img src="~/Content/Images/PleasurePoint.jpg" />
-        <button class=" btn">About Us</button>
+    <div class=" container btn" style=" position:inherit; margin-top: 200px; margin-left: 10px">
+        <img src="~/Content/Images/PleasurePoint.jpg" >
+        <button class=" btn"  >
+            @Html.ActionLink("About Us", "About", "Home")
+        </button>
     </div>
 
 </body>
