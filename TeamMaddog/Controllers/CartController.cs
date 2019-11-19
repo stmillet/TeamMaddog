@@ -10,7 +10,15 @@ namespace TeamMaddog.Controllers
     public class CartController : Controller
     {
         //initialize the shopping Cart
-        public static Cart theCart = new Cart(); 
+        public static Cart theCart = new Cart();
+
+        public static List<Product> lstProducts = new List<Product>()
+        {
+            new Product { ProductID = 1, ProdName = "Backpack", ProdPrice = 49.99, ProdSize = "" },
+            new Product { ProductID = 2, ProdName = "Hat", ProdPrice = 14.99, ProdSize = "" },
+            new Product { ProductID = 3, ProdName = "Sweater", ProdPrice = 34.99, ProdSize = "" },
+            new Product { ProductID = 4, ProdName = "Tshirt", ProdPrice = 19.99, ProdSize = "" },
+        };
 
         //show cart items function displays cart items
         public ActionResult ShowCartItems()
@@ -27,16 +35,18 @@ namespace TeamMaddog.Controllers
 
         //post info to showcartitems view
         [HttpPost]
-        public ActionResult AddCartItems(Product myCartItems)
+        public ActionResult AddCartItems(string nameIn)
         {
             if (ModelState.IsValid)
             {
+                Product myCartItems = new Product();
+                myCartItems = lstProducts.FirstOrDefault(x => x.ProdName == nameIn);
                 theCart.TheProducts.Add(myCartItems);
                 return RedirectToAction("ShowCartItems", "Cart");
             }
             else
             {
-                return View(myCartItems);
+                return View("ShowCartItems", theCart);
             }
         }
     }
