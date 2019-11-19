@@ -23,6 +23,10 @@ namespace TeamMaddog.Controllers
         public ActionResult Details(string name)
         {
             Product theProduct = lstProducts.Find(x => x.ProdName == name);
+            List<string> sizes = new List<string>() {
+                "Extra Small", "Small", "Medium", "Large", "Extra Large"
+            };
+            ViewBag.Cart = sizes;
             return View(theProduct);
         }
 
