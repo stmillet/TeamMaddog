@@ -32,7 +32,7 @@ namespace TeamMaddog.Controllers
             if (ModelState.IsValid)
             {
                 theCart.TheProducts.Add(myCartItems);
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("ShowCartItems", "Cart");
             }
             else
             {
