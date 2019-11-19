@@ -4,10 +4,10 @@
     ViewBag.Title = "ShowCustomerInfo";
 }
 
-<h2>ShowCustomerInfo</h2>
+<h2>Show Customer Information</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Add Customer", "AddCustomerInfo")
 </p>
 <table class="table">
     <tr>
@@ -65,9 +65,7 @@
             @Html.DisplayFor(modelItem => item.Cust_Zip)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "EditCustomerInfo", new { iCode = item.Customer_Code })
         </td>
     </tr>
 }
