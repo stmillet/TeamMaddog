@@ -7,7 +7,7 @@
 <h2>Show Cart Items</h2>
 
 <p>
-    @Html.ActionLink("Add Product", "AddCartItems")
+    @Html.ActionLink("Add Another Item", "AddCartItems")
 </p>
 <table class="table">
     <tr>
@@ -20,17 +20,19 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model.TheProducts) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.CartNum)
+            @Html.DisplayFor(modelItem => item.ProdName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ShippingMethod)
+            @Html.DisplayFor(modelItem => item.ProdSize)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.DisplayFor(modelItem => item.ProdPrice)
+        </td>
+        <td>
+
             @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
         </td>
     </tr>
