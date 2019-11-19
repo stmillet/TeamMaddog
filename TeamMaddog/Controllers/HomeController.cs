@@ -14,5 +14,10 @@ namespace TeamMaddog.Controllers
             //branch test
             return View();
         }
+
+        public ActionResult About()
+        {
+            return View();
+        }
     }
 }
