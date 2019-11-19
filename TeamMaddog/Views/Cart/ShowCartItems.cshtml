@@ -4,18 +4,21 @@
     ViewBag.Title = "ShowCartItems";
 }
 
-<h2>Show Cart Items</h2>
-
+<br /><br /><br /><br />
+<h2>Hello Customer</h2>
 <p>
     @Html.ActionLink("Add Another Item", "AddCartItems")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.CartNum)
+            @Html.DisplayNameFor(model => model.TheProducts[0].ProdName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ShippingMethod)
+            @Html.DisplayNameFor(model => model.TheProducts[0].ProdSize)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TheProducts[0].ProdPrice)
         </th>
         <th></th>
     </tr>
