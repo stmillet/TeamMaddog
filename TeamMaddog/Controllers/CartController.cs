@@ -39,8 +39,7 @@ namespace TeamMaddog.Controllers
         {
             if (ModelState.IsValid)
             {
-                Product myCartItems = new Product();
-                myCartItems = lstProducts.FirstOrDefault(x => x.ProdName == nameIn);
+                Product myCartItems = lstProducts.FirstOrDefault(x => x.ProdName == nameIn);
                 theCart.TheProducts.Add(myCartItems);
                 return RedirectToAction("ShowCartItems", "Cart");
             }
