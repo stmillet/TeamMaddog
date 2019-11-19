@@ -10,7 +10,7 @@ namespace TeamMaddog.Controllers
     public class CartController : Controller
     {
         //initialize customer list
-        public static Cart lstCartItems = new List<Cart>();
+        public static Cart lstCartItems = new Cart();
 
         //show cart items function displays cart items
         public ActionResult ShowCartItems()
@@ -27,11 +27,11 @@ namespace TeamMaddog.Controllers
 
         //post info to showcartitems view
         [HttpPost]
-        public ActionResult AddCartItems(Cart myCartItems)
+        public ActionResult AddCartItems(Product myCartItems)
         {
             if (ModelState.IsValid)
             {
-                lstCartItems.Add(myCartItems);
+                lstCartItems.TheProducts.Add(myCartItems);
                 return RedirectToAction("Index", "Home");
             }
             else
