@@ -1,0 +1,39 @@
+﻿@model IEnumerable<TeamMaddog.Models.Cart>
+
+@{
+    ViewBag.Title = "ShowCartItems";
+}
+
+<h2>Show Cart Items</h2>
+
+<p>
+    @Html.ActionLink("Add Product", "AddCartItems")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CartNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShippingMethod)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CartNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShippingMethod)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
