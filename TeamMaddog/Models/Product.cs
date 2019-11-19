@@ -17,7 +17,7 @@ namespace TeamMaddog.Models
 
         [Required]
         [Display(Name = "Price")]
-        public decimal ProdPrice { get; set; }
+        public double ProdPrice { get; set; }
 
         [Display(Name = "Size")]
         public string ProdSize { get; set; }
