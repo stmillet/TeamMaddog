@@ -26,6 +26,7 @@
     @foreach (var item in Model.TheProducts)
     {
         <tr>
+            <!--displaying the items that the customer chose-->
             <td>
                 @Html.DisplayFor(modelItem => item.ProdName)
             </td>
@@ -40,5 +41,5 @@
     }
 
 </table>
-
+<!--the check out action link-->
 @Html.ActionLink("Check Out", "CheckOut")
