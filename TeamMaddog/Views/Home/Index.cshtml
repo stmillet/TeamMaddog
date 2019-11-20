@@ -4,29 +4,28 @@
 </head>
 <body>
     <br /><br /><br /><br />
-<div class="hero-image" style="margin-left:14px; width: 600px">
-  <img src="~/Content/Images/PleasurePoint2.jpg" alt="Nature" class="hero-image" style=" opacity: 0.5;">
-    <div class="hero-text">
-        <h1>Team Maddog</h1>
-        <p>Say Yes to Life</p> 
+    <div class="hero-image" style="margin-left:14px; width: 600px">
+        <img src="~/Content/Images/PleasurePoint2.jpg" alt="Nature" class="hero-image" style=" opacity: 0.5;">
+        <div class="hero-text">
+            <h1>Team Maddog</h1>
+            <p>Say Yes to Life</p>
+        </div>
+
     </div>
 
-</div>
 
-
-    <div class=" container" style="position:inherit; margin-left:0px; margin-top: 50px">
+    <div class=" hero-image" style="position:inherit; margin-left:0px; margin-top: 50px">
         <img src="~/Content/Images/HomePage.JPG" style="width: 600px; height: auto; " />
-        <button class=" btn">
-            @Html.ActionLink("Shop Now", "AddCartItems", "Cart")
-        </button>
+        <a class="semi-transparent-button" href="@Url.Action("AddCartItems", "Cart")">Shop Now</a>
+
     </div>
+    <!-- <button class=" btn">
+            /*Html.ActionLink("Shop Now", "AddCartItems", "Cart")*/
+        </button>-->
 
-
-    <div class=" container " style=" position:inherit; margin-top: 100px; margin-right: 400000px">
+    <div class="hero-image " style=" position:inherit; margin-top: 100px;">
         <img src="~/Content/Images/38th.jpg" style="width: 600px; height: auto" />
-        <button class=" btn">
-            @Html.ActionLink("About Us", "About", "Home")
-        </button>
+ <a class="semi-transparent-button" href="@Url.Action("About", "Home")">About Us</a>
     </div>
 
 </body>
