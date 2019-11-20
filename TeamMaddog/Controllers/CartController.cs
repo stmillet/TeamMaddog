@@ -78,7 +78,6 @@ namespace TeamMaddog.Controllers
             }
         }
 
-        [HttpPost]
         public ActionResult CheckOut()
         {
             return View(theCart);

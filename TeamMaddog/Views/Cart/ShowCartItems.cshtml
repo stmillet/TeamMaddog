@@ -23,23 +23,24 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model.TheProducts) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProdName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProdSize)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProdPrice)
-        </td>
-        <td>
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model.TheProducts)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdSize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdPrice)
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
 
 </table>
 
-<input type="submit" value="Check Out" formaction="Checkout" class="btn btn-default"/>
+@Html.ActionLink("Check Out", "CheckOut")
