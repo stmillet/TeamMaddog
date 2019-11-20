@@ -4,19 +4,52 @@
     ViewBag.Title = "CheckOut";
 }
 
-<h2>CheckOut</h2>
+<h2>Check Out</h2>
 
-<!-- this adds up the subtotal of all the products the customer has chosen-->
-@{
-    Model.SubTotal = 0;
-    foreach(var item in Model.TheProducts)
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TheProducts[0].ProdName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TheProducts[0].ProdSize)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TheProducts[0].ProdPrice)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.TheProducts)
     {
-        Model.SubTotal += item.ProdPrice;
-    };
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdSize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdPrice)
+            </td>
+          
+        </tr>
+    }
+</table>
 
-   <h3><strong>Subtotal:</strong> @Html.Raw(Model.SubTotal)</h3>
 
-}
+    <!-- this adds up the subtotal of all the products the customer has chosen-->
+    @{
+        Model.SubTotal = 0;
+        foreach (var item in Model.TheProducts)
+        {
+            Model.SubTotal += item.ProdPrice;
+        };
+
+        <h3><strong>Subtotal:</strong> @Html.Raw(Model.SubTotal)</h3>
+
+    }
 
 
 
