@@ -11,15 +11,14 @@
 {
     @Html.AntiForgeryToken()
 
-    //The hidden fields for the products. 
+
 <div hidden>
     @Html.EditorFor(model => model.ProdName, new { htmlAttributes = new { @class = "form-control" } })
     @Html.EditorFor(model => model.ProdPrice, new { htmlAttributes = new { @class = "form-control" } })
     @Html.EditorFor(model => model.ProductID, new { htmlAttributes = new { @class = "form-control" } })
 
 </div>
-
-    //various divs for the products
+// divs for the details view for the home controller
     <div class="form-horizontal">
         <h4>Product</h4>
         <hr />

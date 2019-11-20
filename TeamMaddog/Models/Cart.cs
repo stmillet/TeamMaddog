@@ -7,19 +7,23 @@ using System.Web;
 namespace TeamMaddog.Models
 {
     public class Cart
-    {   
-        //Various fields that are all required in the Cart page. 
+    {
+        //various cart getters and setters
+        //initialize the cart number
         [Required]
         public int CartNum { get; set; }
 
+        //initialize the name
         [Required]
         [Display( Name = "Customer Name:")]
         public Customer TheCustomer { get; set; }
 
+        //initialize the product name
         [Required]
         [Display( Name = "Item")]
         public List<Product> TheProducts { get; set; }
 
+        //initialize the shipping method
         [Required]
         [Display(Name = "Shipping Method")]
         public string ShippingMethod { get; set; }

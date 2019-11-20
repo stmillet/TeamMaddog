@@ -5,9 +5,8 @@
 }
 
 <h2>Show Customer Information</h2>
-
+<!-- this displays all the customer info-->
 <p>
-    <!--actionlink to addcustomer method-->
     @Html.ActionLink("Add Customer", "AddCustomerInfo")
 </p>
 <table class="table">
@@ -67,11 +66,10 @@
                 @Html.DisplayFor(modelItem => item.Cust_Zip)
             </td>
             <td>
-                <!--actionlink to edit customer method-->-->
                 @Html.ActionLink("Edit", "EditCustomerInfo", new { iCode = item.Customer_Code })
             </td>
         </tr>
     }
-    <!--actionlink to return to the home page-->
+    <!--action link back to the home page-->
     @Html.ActionLink("Back to Home", "Index", "Home")
 </table>
