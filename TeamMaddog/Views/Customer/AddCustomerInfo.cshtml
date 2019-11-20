@@ -5,7 +5,7 @@
 }
 
 <h2>Add Customer Information</h2>
-<!--form to input customer information-->
+
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
@@ -72,7 +72,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <br /><br /><!--pass model information to customer controller-->
+                <br /><br />
                 <input type="submit" value="Add Customer" class="btn btn-default" />
                 <br />
             </div>
@@ -81,6 +81,5 @@
 }
 
 <div>
-    <!--actionlink to return to the customer list-->
     @Html.ActionLink("Back to List", "ShowCustomerInfo")
 </div>
