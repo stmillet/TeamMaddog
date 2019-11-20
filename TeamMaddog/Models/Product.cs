@@ -20,14 +20,7 @@ namespace TeamMaddog.Models
         public double ProdPrice { get; set; }
 
         [Display(Name = "Size")]
-        public Size ProdSize { get; set; }
+        public string ProdSize { get; set; }
 
-    }
-
-    public enum Size
-    {
-        Small,
-        Medium,
-        Large
     }
 }
