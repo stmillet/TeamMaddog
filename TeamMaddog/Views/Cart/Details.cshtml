@@ -29,14 +29,14 @@
         <div class="form-group">
             <div class="col-md-10">
                 <b style="margin-left:5px">@Html.DisplayNameFor(model => model.ProdSize):</b>
-                @Html.DropDownListFor(model => model.ProdSize, new SelectList(ViewBag.Cart))
+                @Html.DropDownListFor(model => model.ProdSize, new SelectList(ViewBag.Cart, "SizeCode", "SizeDesc"))
                 @Html.ValidationMessageFor(model => model.ProdSize, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Add" formataction="Detail" class="btn btn-default" />
+                <input type="submit" value="Add" formaction="Detail" class="btn btn-default" />
             </div>
         </div>
     </div>
