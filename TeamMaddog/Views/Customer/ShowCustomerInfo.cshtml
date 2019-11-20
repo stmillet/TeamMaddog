@@ -38,36 +38,37 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Customer_Code)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Customer_FName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Customer_LName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Customer_Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cust_Street_Address)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cust_City)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cust_State)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cust_Zip)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "EditCustomerInfo", new { iCode = item.Customer_Code })
-        </td>
-    </tr>
-}
-
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer_Code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer_FName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer_LName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer_Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cust_Street_Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cust_City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cust_State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cust_Zip)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EditCustomerInfo", new { iCode = item.Customer_Code })
+            </td>
+        </tr>
+    }
+    @Html.ActionLink("Back to Home", "Index", "Home")
 </table>
