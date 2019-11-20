@@ -19,7 +19,7 @@ namespace TeamMaddog.Controllers
             new Product { ProductID = 3, ProdName = "Sweater", ProdPrice = 34.99, ProdSize = "" },
             new Product { ProductID = 4, ProdName = "Tshirt", ProdPrice = 19.99, ProdSize = "" },
         };
-
+        [HttpGet]
         public ActionResult Details(string name)
         {
             Product theProduct = lstProducts.Find(x => x.ProdName == name);
@@ -49,7 +49,7 @@ namespace TeamMaddog.Controllers
 
         //post info to showcartitems view
         [HttpPost]
-        public ActionResult AddCartItems(string nameIn)
+        public ActionResult Detail(string nameIn)
         {
             if (ModelState.IsValid)
             {
