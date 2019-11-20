@@ -17,26 +17,26 @@
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
         <div class="form-group">
-            <b>@Html.DisplayNameFor(model => model.ProdName)</b>
+            <b style="margin-left:18px">@Html.DisplayNameFor(model => model.ProdName):</b>
             @Html.DisplayFor(model => model.ProdName)
         </div>
 
         <div class="form-group">
-            <b>@Html.DisplayNameFor(model => model.ProdPrice)</b>
+            <b style="margin-left:13px">@Html.DisplayNameFor(model => model.ProdPrice):</b>
             @Html.DisplayFor(model => model.ProdPrice)
         </div>
 
         <div class="form-group">
             <div class="col-md-10">
-                <b>@Html.DisplayNameFor(model => model.ProdSize)</b>
-                @Html.DropDownListFor(model => model.ProdSize, new SelectList(ViewBag.Cart, null))
+                <b style="margin-left:5px">@Html.DisplayNameFor(model => model.ProdSize):</b>
+                @Html.DropDownListFor(model => model.ProdSize, new SelectList(ViewBag.Cart))
                 @Html.ValidationMessageFor(model => model.ProdSize, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Add" formaction="Detail" class="btn btn-default" />
+                <input type="submit" value="Add" formataction="Detail" class="btn btn-default" />
             </div>
         </div>
     </div>
