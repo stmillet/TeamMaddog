@@ -8,6 +8,7 @@ namespace TeamMaddog.Models
 {
     public class Cart
     {   
+        //Various fields that are all required in the Cart page. 
         [Required]
         public int CartNum { get; set; }
 

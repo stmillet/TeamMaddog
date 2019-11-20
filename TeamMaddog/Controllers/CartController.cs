@@ -20,6 +20,7 @@ namespace TeamMaddog.Controllers
             new Product { ProductID = 4, ProdName = "Tshirt", ProdPrice = 19.99, ProdSize = "" },
         };
 
+        //List of sizes for the drop down size menu
         public static List<Size> sizes = new List<Size>() 
             {
                 new Size { SizeCode = "XS", SizeDesc = "Extra Small" },
@@ -29,7 +30,7 @@ namespace TeamMaddog.Controllers
                 new Size { SizeCode = "XL", SizeDesc = "Extra Large"}
             };
 
-
+        //Get method for the size detail
         [HttpGet]
         public ActionResult Details(string name)
         {
@@ -78,6 +79,8 @@ namespace TeamMaddog.Controllers
             }
         }
 
+        //Check out post method after the customer is done choosing their items
+        [HttpPost]
         public ActionResult CheckOut()
         {
             return View(theCart);
