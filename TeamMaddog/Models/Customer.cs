@@ -9,7 +9,6 @@ namespace TeamMaddog.Models
     public class Customer
     {
         //initialize customer code
-        [Required]
         [Display(Name = "Customer Code")]
         public int Customer_Code { get; set; }
 
