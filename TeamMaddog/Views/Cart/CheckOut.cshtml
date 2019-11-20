@@ -1,0 +1,20 @@
+﻿@model TeamMaddog.Models.Cart
+
+@{
+    ViewBag.Title = "CheckOut";
+}
+
+<h2>CheckOut</h2>
+
+<h3><strong>Subtotal:</strong></h3>
+
+ @{ 
+     foreach (var item in Model.TheProducts)
+     {
+         double subtotal = 0;
+         subtotal += item.ProdPrice;
+     }
+        <h3></h3>
+
+     }
+

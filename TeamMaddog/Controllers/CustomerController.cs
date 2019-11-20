@@ -33,7 +33,7 @@ namespace TeamMaddog.Controllers
             {
                 myCustomerInfo.Customer_Code = lstCustomerInfo.Count() + 1;
                 lstCustomerInfo.Add(myCustomerInfo);
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("ShowCustomerInfo", "Customer");
             }
             else
             {
@@ -66,7 +66,7 @@ namespace TeamMaddog.Controllers
                 obj.Cust_Zip = myModel.Cust_Zip;
             }
 
-            return View("ShowCustomers", lstCustomerInfo);
+            return View("ShowCustomerInfo", lstCustomerInfo);
         }
     }
 }

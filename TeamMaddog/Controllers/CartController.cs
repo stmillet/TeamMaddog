@@ -77,5 +77,10 @@ namespace TeamMaddog.Controllers
                 return View("ShowCartItems", theCart);
             }
         }
+
+        public ActionResult CheckOut()
+        {
+            return View(theCart);
+        }
     }
 }
