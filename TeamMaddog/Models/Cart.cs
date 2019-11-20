@@ -24,5 +24,7 @@ namespace TeamMaddog.Models
         [Display(Name = "Shipping Method")]
         public string ShippingMethod { get; set; }
 
+        public double SubTotal { get; set; }
+
     }
 }

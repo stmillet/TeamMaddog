@@ -79,6 +79,11 @@ namespace TeamMaddog.Controllers
             }
         }
 
+        public ActionResult Checkout()
+        {
+            return View();
+        }
+
         //Check out post method after the customer is done choosing their items
         [HttpPost]
         public ActionResult CheckOut()
