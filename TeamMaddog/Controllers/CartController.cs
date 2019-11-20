@@ -20,6 +20,7 @@ namespace TeamMaddog.Controllers
             new Product { ProductID = 4, ProdName = "Tshirt", ProdPrice = 19.99, ProdSize = "" },
         };
 
+        //drop down selection for the different sizes of products
         public static List<Size> sizes = new List<Size>() 
             {
                 new Size { SizeCode = "XS", SizeDesc = "Extra Small" },
