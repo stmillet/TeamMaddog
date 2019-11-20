@@ -58,11 +58,17 @@ namespace TeamMaddog.Controllers
 
         //post info to showcartitems view
         [HttpPost]
-        public ActionResult Detail(string nameIn)
+        public ActionResult Detail(Product theProduct)
         {
+            if(theCart.TheProducts == null)
+            {
+                theCart.TheProducts = new List<Product>();
+            }
+
             if (ModelState.IsValid)
             {
-                Product myCartItems = lstProducts.FirstOrDefault(x => x.ProdName == nameIn);
+                Product myCartItems = lstProducts.Find(x => x.ProdName == theProduct.ProdName);
+                myCartItems.ProdSize = theProduct.ProdSize;
                 theCart.TheProducts.Add(myCartItems);
                 return RedirectToAction("ShowCartItems", "Cart");
             }
