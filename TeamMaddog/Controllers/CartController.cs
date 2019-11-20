@@ -19,13 +19,22 @@ namespace TeamMaddog.Controllers
             new Product { ProductID = 3, ProdName = "Sweater", ProdPrice = 34.99, ProdSize = "" },
             new Product { ProductID = 4, ProdName = "Tshirt", ProdPrice = 19.99, ProdSize = "" },
         };
+
+        public static List<Size> sizes = new List<Size>() 
+            {
+                new Size { SizeCode = "XS", SizeDesc = "Extra Small" },
+                new Size { SizeCode = "S", SizeDesc = "Small"},
+                new Size { SizeCode = "M", SizeDesc = "Medium"},
+                new Size { SizeCode = "L", SizeDesc = "Large"},
+                new Size { SizeCode = "XL", SizeDesc = "Extra Large"}
+            };
+
+
         [HttpGet]
         public ActionResult Details(string name)
         {
             Product theProduct = lstProducts.Find(x => x.ProdName == name);
-            List<string> sizes = new List<string>() {
-                "Extra Small", "Small", "Medium", "Large", "Extra Large"
-            };
+            
             ViewBag.Cart = sizes;
             return View(theProduct);
         }
