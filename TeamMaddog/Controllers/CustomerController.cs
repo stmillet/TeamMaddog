@@ -18,7 +18,7 @@ namespace TeamMaddog.Controllers
             return View(lstCustomerInfo);
         }
 
-        //get info from addcustomer view
+        //get info from addcustomerinfo view
         [HttpGet]
         public ActionResult AddCustomerInfo()
         {
