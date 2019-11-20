@@ -1,21 +1,56 @@
-﻿@model TeamMaddog.Models.Cart
+﻿
+@model TeamMaddog.Models.Cart
 
 @{
     ViewBag.Title = "CheckOut";
 }
 
-<h2>CheckOut</h2>
+<h2>Check Out</h2>
 
-<h3><strong>Subtotal:</strong></h3>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TheProducts[0].ProdName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TheProducts[0].ProdSize)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TheProducts[0].ProdPrice)
+        </th>
+        <th></th>
+    </tr>
+   
+    @foreach (var item in Model.TheProducts)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdSize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdPrice)
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+</table>
 
-<!--The checkout which adds together the prices of all the items selected by the customer-->
- @{ 
-     foreach (var item in Model.TheProducts)
-     {
-         double subtotal = 0;
-         subtotal += item.ProdPrice;
-     }
-        <h3></h3>
+@{
+    Model.SubTotal = 0;
+    foreach (var item in Model.TheProducts)
+    {
 
-     }
+        Model.SubTotal += item.ProdPrice;
+    }
+ 
+<h3><strong>Subtotal: </strong> @Html.Raw(Model.SubTotal)</h3>
+
+    
+
+}
 
