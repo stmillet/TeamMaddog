@@ -15,21 +15,20 @@
         <h4>Product</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
         <div class="form-group">
-            @Html.LabelFor(model => model.ProductID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <b>@Html.DisplayNameFor(model => model.ProdName)</b>
+            @Html.DisplayFor(model => model.ProdName)
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ProdName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <b>@Html.DisplayNameFor(model => model.ProdPrice)</b>
+            @Html.DisplayFor(model => model.ProdPrice)
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ProdPrice, htmlAttributes: new { @class = "control-label col-md-2" })
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.ProdSize, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
+                <b>@Html.DisplayNameFor(model => model.ProdSize)</b>
                 @Html.DropDownListFor(model => model.ProdSize, new SelectList(ViewBag.Cart))
                 @Html.ValidationMessageFor(model => model.ProdSize, "", new { @class = "text-danger" })
             </div>
