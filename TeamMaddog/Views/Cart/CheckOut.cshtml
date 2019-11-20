@@ -6,15 +6,19 @@
 
 <h2>CheckOut</h2>
 
-<h3><strong>Subtotal:</strong></h3>
+<!-- this adds up the subtotal of all the products the customer has chosen-->
+@{
+    Model.SubTotal = 0;
+    foreach(var item in Model.TheProducts)
+    {
+        Model.SubTotal += item.ProdPrice;
+    };
 
- @{ 
-     foreach (var item in Model.TheProducts)
-     {
-         double subtotal = 0;
-         subtotal += item.ProdPrice;
-     }
-        <h3></h3>
+   <h3><strong>Subtotal:</strong> @Html.Raw(Model.SubTotal)</h3>
 
-     }
+}
+
+
+
+
 
