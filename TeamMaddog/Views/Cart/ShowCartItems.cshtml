@@ -26,7 +26,6 @@
     @foreach (var item in Model.TheProducts)
     {
         <tr>
-            <!-- the fields that are displayed for the customer-->
             <td>
                 @Html.DisplayFor(modelItem => item.ProdName)
             </td>
@@ -36,7 +35,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.ProdPrice)
             </td>
-           
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
         </tr>
     }
 
